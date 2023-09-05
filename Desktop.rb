@@ -18,7 +18,7 @@ live_loop :bass do
   sync :drums
   use_synth :chipbass
   sample :bd_sone, amp: 3
-  play chord( :c2, :minor).choose, sustain: 7, amp: 0.7
+  play chord( :c2, :minor).choose, sustain: 10, amp: 0.7
   sleep 8
 end
 
@@ -26,4 +26,12 @@ live_loop :effects do
   sync :drums
   sample choose ([:elec_blip2, :elec_twip, :elec_beep, :elec_ping])
   sleep 2
+end
+#add some effects
+
+live_loop :synth do
+  sync :drums
+  use_synth :blade
+  play chord( :c2, :minor).choose, sustain: 10, amp: 0.7
+  sleep 8
 end
