@@ -22,16 +22,22 @@ live_loop :bass do
   sleep 8
 end
 
-live_loop :effects do
-  sync :drums
-  sample choose ([:elec_blip2, :elec_twip, :elec_beep, :elec_ping])
-  sleep 2
-end
-#add some effects
-
 live_loop :synth do
   sync :drums
   use_synth :blade
   play chord( :c2, :minor).choose, sustain: 10, amp: 0.7
   sleep 8
 end
+
+live_loop :effects do
+  sync :drums
+  sample choose ([:elec_blip2, :elec_twip, :elec_beep, :elec_ping])
+  sleep 2
+live_loop
+
+#add randomization to the effects loop
+#add a new loop with a different sample
+#add a new loop with a different synth
+#add a new loop with a different bass
+  
+
