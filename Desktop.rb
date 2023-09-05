@@ -33,11 +33,10 @@ live_loop :effects do
   sync :drums
   sample choose ([:elec_blip2, :elec_twip, :elec_beep, :elec_ping])
   sleep 2
-live_loop
-
+  live_loop
+end
 #add randomization to the effects loop
 #add a new loop with a different sample
 #add a new loop with a different synth
 #add a new loop with a different bass
-  
 
